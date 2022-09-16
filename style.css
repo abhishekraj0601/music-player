@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#main1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: aliceblue;
+}
+#main{
+
+    border: 1px solid white;
+    box-shadow: 3px 3px 3px 3px black;
+    width: 300px;
+    border-radius: 40px;
+    height: 80vh;    
+    
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.details{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.now-playing{
+    
+    margin-top: 20px;
+    font-size: xx-large;
+}
+.track-art{
+   box-shadow: 3px 3px 3px 3px ;
+   border-radius: 50%;
+    width:200px;
+    background-image: url(music.jpg);
+    height: 200px;
+    margin: 20px 0;
+    background-image: url();
+    background-position: center;
+    background-size: cover;
+}
+.track-name{
+    text-align: center;
+    width: 80%;
+    font-weight: bold;
+    overflow: hidden;
+    font-size: x-large;
+}
+.track-artist{
+    margin: 20px 0;
+
+    font-size: larger;
+    margin: 10px;
+}
+.buttons{
+    display: flex;
+    width: 80%;
+    margin: 10px 0;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.prev-track,.next-track,.playpause-track{
+    cursor: pointer;
+}
+.slider_container{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    height: 30px;
+    
+}
+.slider_container1{
+    margin-bottom: 50px;
+}
+.seek_slider{
+    margin: 0 10px;
+    width: 90%;
+    cursor: pointer;
+}
+.volume_slider{
+    margin: 0 10px;
+    
+    cursor: pointer;
+}

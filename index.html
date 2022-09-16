@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media800.css">
+    <link rel="stylesheet" href="media500.css">
+    <script src="https://kit.fontawesome.com/342cf64192.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="main1">
+    <div id="main">
+         <!-- Define the section for displaying details -->
+    <div class="details">
+        <div class="now-playing">Playing x OF y</div>
+        <div class="track-art"></div>
+        <div class="track-name">Track Name</div>
+        <div class="track-artist">Track Artist</div>
+      </div>
+   
+      <!-- Define the section for displaying track buttons -->
+      <div class="buttons">
+        <div class="prev-track" onclick="prevTrack()">
+          <i class="fa fa-step-backward fa-2x"></i>
+        </div>
+        <div class="playpause-track" onclick="playpauseTrack()">
+          <i class="fa fa-play-circle fa-4x"></i>
+        </div>
+        <div class="next-track" onclick="nextTrack()">
+          <i class="fa fa-step-forward fa-2x"></i>
+        </div>
+      </div>
+
+       <!-- Define the section for displaying the seek slider-->
+    <div class="slider_container">
+        <div class="current-time">00:00</div>
+        <input type="range" min="1" max="100"
+          value="0" class="seek_slider" onchange="seekTo()">
+        <div class="total-duration">00:00</div>
+      </div>
+   
+      <!-- Define the section for displaying the volume slider-->
+      <div class="slider_container1">
+        <i class="fa fa-volume-down"></i>
+        <input type="range" min="1" max="100"
+          value="99" class="volume_slider" onchange="setVolume()">
+        <i class="fa fa-volume-up"></i>
+      </div>
+
+    </div>
+
+  </div>
+    <script src="script.js"></script>
+</body>
+</html>
