@@ -18,9 +18,9 @@
 }
 #main{
 
-    box-shadow: 2px 2px 10px 2px var(--shadow-color);
+    box-shadow: 2px 2px 30px 2px var(--shadow-color);
     width: 300px;
-    border-radius: 40px;
+    border-radius: 30px;
     height: 80vh;    
     
     display: flex;
@@ -37,9 +37,8 @@
 
 }
 .now-playing{
-    
-    margin-top: 20px;
-    font-size: x-large;
+    margin-left: 20px;
+    font-size: large;
 }
 @keyframes rotate {
     100%{
@@ -48,7 +47,7 @@
     
 }
 .track-art{
-    box-shadow: 0px 0px 5px 5px var(--shadow-color);
+    box-shadow: 0px 0px 20px 2px var(--shadow-color);
     border-radius: 50%;
     width:200px;
     background-image: url(music.jpg);
@@ -66,7 +65,7 @@
     word-break: keep-all;
     overflow-x: hidden;
     font-weight: bold;
-    font-size: xx-large;
+    font-size: 30px;
 }
 .track-artist{
     margin: 10px 0;
@@ -76,7 +75,6 @@
 .buttons{
     display: flex;
     width: 80%;
-    margin: 10px 0;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -86,25 +84,57 @@
 .prev-track,.next-track,.playpause-track{
     cursor: pointer;
 }
+.slider_container1{
+    display: flex;
+    justify-content: center;
+}
 .slider_container{
     width: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
     height: 30px;
-    
 }
-.slider_container1{
-    margin-bottom: 50px;
-}
+
 .seek_slider{
     margin: 0 10px;
-    width: 90%;
+    width: 100%;
     cursor: pointer;
 }
 .volume_slider{
     margin: 0 10px;
-    
+    width: 50%;
     cursor: pointer;
+}
+
+#search{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+#srch i{
+    cursor: pointer;
+}
+#srch{
+    display: flex;
+    align-items: center;
+    width: 170px;
+    border-radius: 20px;
+    height: 100%;
+    margin-right: 20px;
+    padding: 0 5px 0 0;
+    box-shadow: 0 0 2px 2px var(--shadow-color);
+
+}
+#srch input{
+    height: 90%;
+    padding-left:10px ;
+    border-radius: 20px;
+    border: none;
+    outline:none;
+    margin-right: 5px;
+    width: 90%;
 }

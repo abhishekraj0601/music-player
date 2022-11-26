@@ -70,7 +70,7 @@ function loadTrack(track_index) {
 track_name.textContent = track_list[track_index].name;
 track_artist.textContent = track_list[track_index].artist;
 now_playing.textContent =
-  "PLAYING " + (track_index + 1) + " OF " + track_list.length;
+  (track_index + 1) + "/" + track_list.length;
 
 // Set an interval of 1000 milliseconds
 // for updating the seek slider
@@ -102,7 +102,7 @@ function resetValues() {
     // Play the loaded track
     curr_track.play();
     isPlaying = true;
-   track_art.style.animation=" rotate 2s linear infinite";
+   track_art.style.animation=" rotate 3s linear infinite";
 
     // Replace icon with the pause icon
     playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-4x"></i>';
@@ -189,3 +189,52 @@ function resetValues() {
 
   // Load the first track in the tracklist
 loadTrack(track_index);
+
+
+
+//  search---------
+var srch_icon = document.querySelector(".fa-magnifying-glass");
+
+// function openPage(){
+//   var search1 = document.getElementById("search1").value;
+
+
+//     if(search1 === "dog"){
+//       alert("if")
+//     }else{
+//       alert("else")
+//     }
+// }
+
+srch_icon.onclick = function(){
+    var search1 = document.getElementById("search1").value;
+     
+ 
+    switch (search1) {
+      case 'turn down':
+        loadTrack(track_index =0);
+        playTrack()    
+        break;
+
+        case 'lonely':
+          loadTrack(track_index =4);
+          playTrack() 
+        break;
+
+          case 'taki taki':
+            loadTrack(track_index =1);
+            playTrack() 
+        break;
+
+        case 'hero':
+          loadTrack(track_index =2);
+          playTrack() 
+        break;
+
+        case 'otilia':
+          loadTrack(track_index =3);
+          playTrack() 
+        break;
+    }
+
+  }
