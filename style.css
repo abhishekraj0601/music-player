@@ -2,30 +2,35 @@
     margin: 0;
     padding: 0;
 }
+:root{
+    --primary-color:white;
+    --secondary-color:black;
+    --shadow-color:rgb(218, 216, 216);
+
+}
 #main1{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    background-color: aliceblue;
+    background:var(--primary-color);
 }
 #main{
 
-    border: 1px solid white;
-    box-shadow: 3px 3px 3px 3px black;
+    box-shadow: 2px 2px 10px 2px var(--shadow-color);
     width: 300px;
     border-radius: 40px;
     height: 80vh;    
     
     display: flex;
-    background-color: white;
+    background:var(--primary-color);
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
 .details{
-    
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,11 +39,17 @@
 .now-playing{
     
     margin-top: 20px;
-    font-size: xx-large;
+    font-size: x-large;
+}
+@keyframes rotate {
+    100%{
+        transform: rotate(360deg);
+    }
+    
 }
 .track-art{
-   box-shadow: 3px 3px 3px 3px ;
-   border-radius: 50%;
+    box-shadow: 0px 0px 5px 5px var(--shadow-color);
+    border-radius: 50%;
     width:200px;
     background-image: url(music.jpg);
     height: 200px;
@@ -49,16 +60,18 @@
 }
 .track-name{
     text-align: center;
-    width: 80%;
+    width: 90%;
+    height: 40px;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    overflow-x: hidden;
     font-weight: bold;
-    overflow: hidden;
-    font-size: x-large;
+    font-size: xx-large;
 }
 .track-artist{
-    margin: 20px 0;
+    margin: 10px 0;
 
     font-size: larger;
-    margin: 10px;
 }
 .buttons{
     display: flex;
@@ -66,6 +79,9 @@
     margin: 10px 0;
     align-items: center;
     justify-content: space-evenly;
+}
+.prev-track,.next-track{
+    color: var(--secondary-color);
 }
 .prev-track,.next-track,.playpause-track{
     cursor: pointer;

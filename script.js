@@ -27,31 +27,31 @@ let track_list = [
         name:"Turn Down",
         artist:"DJ Snake Lil Jon",
         image:"music.jpg",
-        path:"DJ Snake Lil Jon - Turn Down for What.mp3"
+        path:"../playlist/DJ Snake Lil Jon - Turn Down for What.mp3"
     },
     {
         name:"Taki Taki",
         artist:"DJ Snake Lil Jon",
         image:"music.jpg",
-        path:"DJ Snake - Taki Taki ft. Selena Gomez_ Ozuna_ Card(MP3_160K).mp3"
+        path:"../playlist/DJ Snake - Taki Taki ft. Selena Gomez_ Ozuna_ Card(MP3_160K).mp3"
     },
     {
         name:"HEERO_vs_NAGIN_vs_HORN",
         artist:"BEND_PARTY_MIX",
         image:"music.jpg",
-        path:"HEERO_vs_NAGIN_vs_HORN_(BEND_PARTY_MIX_)_DJ_ANANT_CHITALI.mp3"
+        path:"../playlist/HEERO_vs_NAGIN_vs_HORN_(BEND_PARTY_MIX_)_DJ_ANANT_CHITALI.mp3"
     }
     ,{
         name:"Otilia",
         artist:"Otilia Bruma",
         image:"music.jpg",
-        path:"Otilia - Bilionera (official video) ( 128kbps ).mp3"
+        path:"../playlist/Otilia - Bilionera (official video) ( 128kbps ).mp3"
     }
     ,{
         name:"Lonely",
         artist:"Emiway-Bantai",
         image:"music.jpg",
-        path:"Lonely-Emiway-Bantai.mp3"
+        path:"../playlist/Lonely-Emiway-Bantai.mp3"
     },
 ];
 
@@ -102,7 +102,8 @@ function resetValues() {
     // Play the loaded track
     curr_track.play();
     isPlaying = true;
-   
+   track_art.style.animation=" rotate 2s linear infinite";
+
     // Replace icon with the pause icon
     playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-4x"></i>';
   }
@@ -111,7 +112,7 @@ function resetValues() {
     // Pause the loaded track
     curr_track.pause();
     isPlaying = false;
-   
+    track_art.style.animation=" none";
     // Replace icon with the play icon
     playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-4x"></i>';
   }
